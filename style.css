@@ -25,6 +25,8 @@ a {
     object-fit: cover;
 }
 
+/* HEADER */
+
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +94,8 @@ a {
     font-weight: normal;
 }
 
+/* HERO SECTION */
+
 .hero {
     padding-top: 319px;
     height: 1000px;
@@ -142,6 +146,8 @@ a {
     background-color: #ffffff;
 }
 
+/* LIGHT-THEMED HEADER */
+
 .header--light-theme {
     background-color: #ffffff;
 }
@@ -150,3 +156,47 @@ a {
 .header__phone-link--light-theme {
     color: #5C6266;
 }
+
+/* ABOUT US */
+
+.about-us__title {
+    margin-top: 38px;
+    margin-left: 160px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 37px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.about-us__text-wrapper {
+    margin-top: 54px;
+    margin-left: 320px;
+}
+
+.about-us__text {
+    width: 1280px;
+    font-size: 25px;
+    line-height: 51px;
+    color: #101010;
+}
+
+.about-us__learn-more {
+    display: block;
+    margin-top: 56px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-us__learn-more::after {
+    content: url("img/arrow-right.svg");
+    position: relative;
+    top: 2px;
+    left: 18px;
+    width: 5px;
+    height: 10px;
+}
+
