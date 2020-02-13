@@ -1,4 +1,14 @@
-* {
+@font-face {
+    font-family: 'Gotham Pro';
+    font-weight: bold;
+    font-style: normal;
+    src: url('fonts/GothamPro-Bold.eot');
+    src: url('fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GothamPro-Bold.woff') format('woff'),
+        url('fonts/GothamPro-Bold.ttf') format('truetype');
+}
+
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -159,8 +169,12 @@ a {
 
 /* ABOUT US */
 
+.about-us {
+    height: 464px;
+    padding-top: 38px;
+}
+
 .about-us__title {
-    margin-top: 38px;
     margin-left: 160px;
     font-size: 18px;
     font-weight: bold;
@@ -181,7 +195,7 @@ a {
     color: #101010;
 }
 
-.about-us__learn-more {
+.learn-more {
     display: block;
     margin-top: 56px;
     font-size: 12px;
@@ -191,12 +205,92 @@ a {
     color: #000000;
 }
 
-.about-us__learn-more::after {
-    content: url("img/arrow-right.svg");
+.learn-more::after {
+    content: "";
+    display: inline-block;
     position: relative;
-    top: 2px;
-    left: 18px;
-    width: 5px;
-    height: 10px;
+    top: -1px;
+    left: 17px;
+    width: 7px;
+    height: 7px;
+    border-right: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+    transform: rotate(-45deg);
 }
 
+/* PRODUCTS */
+
+.products {
+    display: flex;
+    flex-basis: 33.3%;
+}
+
+.product {
+    position: relative;
+    width: 642px;
+    height: 760px;
+}
+
+.product__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #000000;
+}
+
+.product__background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+}
+
+.product__inner-wrapper {
+    margin-top: 58px;
+    margin-left: 61px;
+}
+
+.product__title {
+    margin-bottom: 53px;
+    font-family: 'Gotham Pro', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 43px;
+    color: #ffffff;
+}
+
+.product__list {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    list-style: none;
+}
+
+.product__list-item {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.product__list-item::before {
+    content: "";
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 4px;
+    height: 1px;
+    width: 10px;
+    border-top: 1px solid #ffffff;
+}
+
+.learn-more--white {
+    color: #ffffff;
+}
+
+.learn-more--white::after {
+    left: 25px;
+    border-color: #ffffff;
+}
