@@ -23,7 +23,12 @@ a {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-.top-background {
+.page__top {
+    position: relative;
+    overflow: hidden;
+}
+
+.page__top-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,8 +36,44 @@ a {
     background-color: #000000;
 }
 
-.top-background__image {
+.page__top-background-image {
     object-fit: cover;
+}
+
+.page__circle {
+    position: absolute;
+    border: 1px solid #FFCE35;
+    border-radius: 50%;
+}
+
+.page__circle--xs {
+    left: 18px;
+    top: 319px;
+    width: 360px;
+    height: 360px;
+    opacity: 0.3;
+}
+
+.page__circle--sm {
+    left: -104px;
+    top: 197px;
+    width: 604px;
+    height: 604px;
+}
+
+.page__circle--md {
+    left: -695px;
+    top: -394px;
+    width: 1786px;
+    height: 1786px;
+}
+
+.page__circle--lg {
+    left: -987px;
+    top: -686px;
+    width: 2370px;
+    height: 2370px;
+    opacity: 0.5;
 }
 
 /* HEADER */
