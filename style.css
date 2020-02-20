@@ -8,6 +8,54 @@
         url('fonts/GothamPro-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'TT Firs Neue';
+    font-weight: bold;
+    font-style: normal;
+    src: url('fonts/TTFirsNeue-Bold.ttf') format('truetype');
+}
+
+@keyframes header {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes hero-background {
+    from {
+        transform: scale(1.2) rotate(5deg);
+    }
+    to {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes hero-title {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes hero-text {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
 html {
     box-sizing: border-box;
     font-size: 18px;
@@ -39,6 +87,7 @@ a {
     height: 4.4rem;
     width: 100%;
     background-color: transparent;
+    animation: header 1.5s;
 }
 
 .header__flex-group {
@@ -147,6 +196,7 @@ a {
     height: 100%;
     object-fit: cover;
     background-color: #000000;
+    animation: hero-background 2.5s;
 }
 
 .hero__circle {
@@ -201,6 +251,7 @@ a {
     font-weight: bold;
     line-height: 140%;
     color: #ffffff;
+    animation: hero-title 1s 1s backwards;
 }
 
 .hero__title-first-word {
@@ -211,6 +262,7 @@ a {
     font-size: 1.39rem;
     line-height: 204.27%;
     color: #ffffff;
+    animation: hero-text 1s 1.5s backwards;
 }
 
 .hero__menu {
@@ -409,7 +461,7 @@ a {
     width: 420px;
     opacity: 0;
     transform: translateX(-80%);
-    transition: transform 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .product:hover .product__learn-more {
@@ -432,21 +484,114 @@ a {
     width: 100%;
 }
 
+/* NewTech Services Holding Limited */
+.newtech-info {
+    position: relative;
+    padding-top: 25.5vh;
+    height: 100vh;
+}
+
+.newtech-info__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 66.7%;
+}
+
+.newtech-info__top,
+.newtech-info__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newtech-info__bottom-left {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newtech-info__bottom-right {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: start;
+}
+
+.newtech-info__bl-stats {
+    display: flex;
+    align-items: center;
+}
+
+.newtech-info__br-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.newtech-info__br-stats:first-child {
+    margin-right: 4%;
+}
+
+.newtech-info__line {
+    position: relative;
+    margin-top: 4.5vh;
+    margin-bottom: 4.5vh;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.newtech-info__background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    width: 72.9vh;
+    height: 72.9vh;
+    transform: translate(-55%, -45%);
+}
+
+.newtech-info__title {
+    flex-basis: 50%;
+    padding-right: 10%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 160%;
+}
+
+.newtech-info__description {
+    flex-basis: 50%;
+    font-size: 1.38rem;
+    line-height: 180%;
+}
+
+.newtech-info__number {
+    width: 15%;
+    font-family: 'TT Firs Neue', sans-serif;
+    font-size: 3.33rem;
+    line-height: 204.27%; 
+}
+
+.newtech-info__number-big {
+    font-family: 'TT Firs Neue', sans-serif;
+    font-size: 8.88rem;
+    line-height: 110%;
+}
+
+.newtech-info__text {
+    font-size: 1rem;
+    line-height: 180%;
+}
+
+/* INTERNATIONAL SALES MAP */
+
+.international-sales {
+    height: 72vh;
+    background-color:#1F1F1F;
+}
+
+
 @media (max-width: 1500px) {
     html {
-        font-size: 16px;
-    }
-
-    .about-us__title {
-        font-size: 0.72rem;
-    }
-    
-    .about-us__text {
-        font-size: 1rem;
-    }
-
-    .learn-more {
-        font-size: 0.6rem;
+        font-size: 80%;
     }
 }
 
