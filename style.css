@@ -8,8 +8,12 @@
         url('fonts/GothamPro-Bold.ttf') format('truetype');
 }
 
-body {
+html {
     box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -32,6 +36,7 @@ a {
     z-index: 1;
     display: flex;
     justify-content: space-between;
+    height: 4.4rem;
     width: 100%;
     background-color: transparent;
 }
@@ -48,28 +53,29 @@ a {
 }
 
 .hamburger-menu {
-    width: 80px;
-    min-width: 80px;
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    min-width: 4.4rem;
+    height: 4.4rem;
     background-color: #5C6266;
     cursor: pointer;
 }
 
 .hamburger-menu__line {
-    position: relative;
-    top: 31px;
-    left: 31px;
-    width: 20px;
-    height: 3px;
+    width: 25%;
+    height: 3.75%;
     background-color: #ffffff;
 }
 
 .hamburger-menu__line--middle {
-    margin-top: 4px;
+    margin-top: 5%;
 }
 
 .hamburger-menu__line--bottom {
-    margin-top: 4px;
+    margin-top: 5%;
 }
 
 .header__logo {
@@ -86,9 +92,9 @@ a {
     align-items: center;
     position: relative;
     margin-right: 75px;
-    font-size: 12px;
+    font-size: 0.67rem;
     font-weight: bold;
-    line-height: 16px;
+    line-height: 133.3%;
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
@@ -111,9 +117,9 @@ a {
 
 .header__phone-link {
     margin-right: 78px;
-    font-size: 12px;
+    font-size: 0.67rem;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 208%;
     color: #ffffff;
 }
 
@@ -185,15 +191,15 @@ a {
     display: flex;
     justify-content: space-between;
     margin-top: 28vh;
-    margin-right: 54px;
-    margin-left: 160px;
+    margin-right: 2.8%;
+    margin-left: 8.3%;
 }
 
 .hero__title {
     margin-bottom: 33px;
-    font-size: 96px;
+    font-size: 5.32rem;
     font-weight: bold;
-    line-height: 134px;
+    line-height: 140%;
     color: #ffffff;
 }
 
@@ -202,8 +208,8 @@ a {
 }
 
 .hero__text {
-    font-size: 25px;
-    line-height: 51px;
+    font-size: 1.39rem;
+    line-height: 204.27%;
     color: #ffffff;
 }
 
@@ -241,38 +247,38 @@ a {
 /* ABOUT US */
 
 .about-us {
-    height: 464px;
-    padding-top: 38px;
+    padding-top: 11.5vh; 
+    height: 50.5vh;
 }
 
 .about-us__title {
-    margin-left: 160px;
-    font-size: 18px;
+    margin-left: 8.3%;
+    font-size: 1rem;
     font-weight: bold;
-    line-height: 37px;
+    line-height: 204.27%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
 .about-us__text-wrapper {
     width: 67%;
-    margin-top: 54px;
+    margin-top: 5.3vh;
     margin-right: auto;
     margin-left: auto;
 }
 
 .about-us__text {
-    font-size: 25px;
-    line-height: 51px;
+    font-size: 1.38rem;
+    line-height: 204.27%;
     color: #101010;
 }
 
 .learn-more {
     display: block;
-    margin-top: 56px;
-    font-size: 12px;
+    margin-top: 5.3vh;
+    font-size: 0.67rem;
     font-weight: bold;
-    line-height: 16px;
+    line-height: 133.3%;
     text-transform: uppercase;
     color: #000000;
 }
@@ -294,6 +300,7 @@ a {
 
 .products {
     display: flex;
+    height: 75vh;
 }
 
 .product {
@@ -302,8 +309,6 @@ a {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: 642px;
-    height: 760px;
     border-right: solid 2px rgba(0, 0, 0, 0.7);
     overflow: hidden;
 }
@@ -326,6 +331,7 @@ a {
     position: absolute;
     top: 0;
     right: 0;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease-in-out;
 }
@@ -342,9 +348,9 @@ a {
 .product__title {
     margin-bottom: 53px;
     font-family: 'Gotham Pro', Arial, sans-serif;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: bold;
-    line-height: 43px;
+    line-height: 120%;
     color: #ffffff;
 }
 
@@ -364,9 +370,9 @@ a {
     position: relative;
     display: block;
     margin-bottom: 22px;
-    font-size: 12px;
+    font-size: 0.67rem;
     font-weight: bold;
-    line-height: 22px;
+    line-height: 180%;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -424,5 +430,23 @@ a {
 
 .product:hover .product__learn-more::before {
     width: 100%;
+}
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 16px;
+    }
+
+    .about-us__title {
+        font-size: 0.72rem;
+    }
+    
+    .about-us__text {
+        font-size: 1rem;
+    }
+
+    .learn-more {
+        font-size: 0.6rem;
+    }
 }
 
