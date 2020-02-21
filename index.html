@@ -7,7 +7,8 @@
     <title>Вяльцева</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -52,26 +53,54 @@
     </header>
 
     <section class="hero">
-        <img class="hero__background-image" src="img/steadidrill_topbanner.png" alt="">
-
-        <div class="hero__inner-wrapper">
-            <div class="hero__circle hero__circle--xs"></div>
-            <div class="hero__circle hero__circle--sm"></div>
-            <div class="hero__circle hero__circle--md"></div>
-            <div class="hero__circle hero__circle--lg"></div>
-            <div class="hero__description">
-                <h1 class="hero__title"><span class="hero__title-first-word">Frontier</span> MWD Systems</h1>
-                <p class="hero__text">
-                    Frontier MWD Systems, a subsidiary of NewTech Services Holding Limited, <br>
-                    is one of the fastest growing and most reliable MWD rental and service companies in the US.
-                </p>
+        <div class="hero__swiper-container swiper-container">
+            <div class="swiper-wrapper hero__inner-wrapper">
+                <div class="swiper-slide">
+                    <img class="hero__background-image" src="img/steadidrill_topbanner.png" alt="">
+                    <div class="hero__description">
+                        <h1 class="hero__title"><span class="hero__title-first-word">Frontier</span> MWD Systems</h1>
+                        <p class="hero__text">
+                            Frontier MWD Systems, a subsidiary of NewTech Services Holding Limited, <br>
+                            is one of the fastest growing and most reliable MWD rental and service companies in the US.
+                        </p>
+                        <div class="hero__circle hero__circle--xs"></div>
+                        <div class="hero__circle hero__circle--sm"></div>
+                        <div class="hero__circle hero__circle--md"></div>
+                        <div class="hero__circle hero__circle--lg"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero__background-image" src="img/slide2-topbanner.jpg" alt="">
+                    <div class="hero__description">
+                        <h1 class="hero__title"><span class="hero__title-first-word">Frontier</span> MWD Systems</h1>
+                        <p class="hero__text">
+                            Frontier MWD Systems, a subsidiary of NewTech Services Holding Limited, <br>
+                            is one of the fastest growing and most reliable MWD rental and service companies in the US.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero__background-image" src="img/slide3-topbanner.jpg" alt="">
+                    <div class="hero__description">
+                        <h1 class="hero__title"><span class="hero__title-first-word">Frontier</span> MWD Systems</h1>
+                        <p class="hero__text">
+                            Frontier MWD Systems, a subsidiary of NewTech Services Holding Limited, <br>
+                            is one of the fastest growing and most reliable MWD rental and service companies in the US.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="hero__background-image" src="img/slide4-topbanner.jpg" alt="">
+                    <div class="hero__description">
+                        <h1 class="hero__title"><span class="hero__title-first-word">Frontier</span> MWD Systems</h1>
+                        <p class="hero__text">
+                            Frontier MWD Systems, a subsidiary of NewTech Services Holding Limited, <br>
+                            is one of the fastest growing and most reliable MWD rental and service companies in the US.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="hero__menu">
-                <div class="hero__menu-long-line"></div>
-                <div class="hero__menu-line"></div>
-                <div class="hero__menu-line"></div>
-                <div class="hero__menu-line"></div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -136,8 +165,10 @@
             <div class="newtech-info__top">
                 <h2 class="newtech-info__title">NewTech Services Holding Limited</h2>
                 <p class="newtech-info__description">
-                    NewTech Services Holding Limited is an international oilfield services company founded in 2009. NewTech
-                    Services supplies high technology products and services to the oil and gas exploration and production
+                    NewTech Services Holding Limited is an international oilfield services company founded in 2009.
+                    NewTech
+                    Services supplies high technology products and services to the oil and gas exploration and
+                    production
                     industry.
                 </p>
             </div>
@@ -145,7 +176,7 @@
             <div class="newtech-info__line">
                 <img class="newtech-info__background-image" src="img/logo-background.svg" alt="">
             </div>
-            
+
             <div class="newtech-info__bottom">
                 <div class="newtech-info__bottom-left">
                     <div class="newtech-info__bl-stats">
@@ -175,7 +206,43 @@
 
     </section>
 
-    <script src="main.js"></script>
+    <section class="news">
+        <h2 class="news__title">Новости</h2>
+        <div class="news__swiper-container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="news-card swiper-slide">
+                    <time datetime="2019-04-18">18 апреля 2019</time>
+                    <h3 class="news-card__title">Команда НьюТек Сервисез по мини-футболу...</h3>
+                    <img class="news-card__background-image" src="img/news-football.jpg" alt="">
+                    <p class="news-card__text">
+                        17 марта на крытом футбольном манеже «Олимп» в районе Новокосино состоялся очередной
+                        благотворительный турнир «Кубок Нефть и Газ ...
+                    </p>
+                </div>
+                <div class="news-card swiper-slide">
+                    <time datetime="2019-03-11">11 марта 2019</time>
+                    <h3 class="news-card__title">В Минусинске успешно выполнены ...</h3>
+                    <img class="news-card__background-image" src="img/news-contract.jpg" alt="">
+                    <p class="news-card__text">
+                        В апреле текущего года по договору между компаниями «НьюТек Сервисез» и «ГЕОТЕК Сейсморазведка»,
+                        одной из крупнейших в мире...
+                    </p>
+                </div>
+                <div class="news-card swiper-slide">
+                    <time datetime="2019-03-08">8 марта 2019</time>
+                    <h3 class="news-card__title"></h3>
+                    <img class="news-card__background-image" src="img/news-plant.jpg" alt="">
+                    <p class="news-card__text">
+                        В апреле в Перми НьюТек Сервисез запустило один из первых заводов в России по производству
+                        набухающих пакеров – надежного, безопасного и
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

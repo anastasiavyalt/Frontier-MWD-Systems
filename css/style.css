@@ -55,7 +55,6 @@
     }
 }
 
-
 html {
     box-sizing: border-box;
     font-size: 18px;
@@ -81,7 +80,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     height: 4.4rem;
@@ -179,10 +178,12 @@ a {
 /* HERO SECTION */
 
 .hero {
-    position: relative;
-    padding-top: 80px;
     height: 100vh;
     overflow: hidden;
+}
+
+.swiper-container {
+    height: 100%;
 }
 
 .hero__background-image {
@@ -236,11 +237,18 @@ a {
     opacity: 0.5;
 }
 
-.hero__inner-wrapper {
+/* .hero__inner-wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 28vh;
+    margin-right: 2.8%;
+    margin-left: 8.3%;
+} */
+
+.hero__description {
+    position: relative;
+    margin-top: 37vh;
     margin-right: 2.8%;
     margin-left: 8.3%;
 }
@@ -265,24 +273,37 @@ a {
     animation: hero-text 1s 1.5s backwards;
 }
 
-.hero__menu {
-    margin-top: 106px;
-    cursor: pointer;
+.swiper-slide {
+    overflow: hidden;
 }
 
-.hero__menu-long-line {
-    margin-bottom: 22px;
-    width: 80px;
-    height: 2px;
-    background-color: #FFCB05;
+.swiper-pagination {
+    position: absolute;
+    top: 45vh;
+    right: 5%;
+    left: auto !important;
 }
 
-.hero__menu-line {
-    margin-bottom: 20px;
-    margin-left: auto;
-    width: 40px;
-    height: 2px;
+.swiper-pagination-bullet {
+    display: block !important;
+    margin-left: auto !important;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    width: 40px !important;
+    height: 2px !important;
     background-color: #ffffff;
+    opacity: 1 !important;
+    border-radius: 0% !important;
+    box-sizing: content-box;
+    background-clip: content-box;
+}
+
+.swiper-pagination-bullet-active {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 80px !important;
+    height: 2px !important;
+    background-color: #FFCB05 !important;
 }
 
 /* LIGHT-THEMED HEADER */
@@ -586,6 +607,27 @@ a {
 .international-sales {
     height: 72vh;
     background-color:#1F1F1F;
+}
+
+/* NEWS */
+.news {
+    height: 100vh;
+}
+
+.news__title {
+    font-size: 2.5rem;
+    line-height: 140%;
+}
+
+.news-card {
+    
+}
+
+.news-card__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 120%;
+    color: #ffffff;
 }
 
 
