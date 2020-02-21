@@ -55,6 +55,15 @@
     }
 }
 
+@keyframes hero-circles {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 html {
     box-sizing: border-box;
     font-size: 18px;
@@ -247,6 +256,7 @@ a {
     width: 360px;
     height: 360px;
     opacity: 0.3;
+    animation: hero-circles 0.8s 1.5s backwards;
 }
 
 .hero__circle--sm {
@@ -254,6 +264,7 @@ a {
     left: -264px;
     width: 604px;
     height: 604px;
+    animation: hero-circles 0.8s 1s backwards;
 }
 
 .hero__circle--md {
@@ -261,6 +272,7 @@ a {
     left: -855px;
     width: 1786px;
     height: 1786px;
+    animation: hero-circles 0.8s 0.5s backwards;
 }
 
 .hero__circle--lg {
@@ -269,6 +281,7 @@ a {
     width: 2370px;
     height: 2370px;
     opacity: 0.5;
+    animation: hero-circles 0.8s backwards;
 }
 
 .hero__description {
@@ -505,7 +518,7 @@ a {
 /* NewTech Services Holding Limited */
 .newtech-info {
     position: relative;
-    padding-top: 25.5vh;
+    padding-top: 25vh;
     height: 100vh;
 }
 
@@ -612,20 +625,63 @@ a {
 }
 
 .news__title {
+    margin-top: 16vh;
+    margin-left: 17vw;
+    margin-bottom: 6vh;
     font-size: 2.5rem;
     line-height: 140%;
 }
 
 .news-card {
-    
+    width: 620px;
+}
+
+.news-card__date {
+    display: block;
+    margin-bottom: 26px;
+    font-size: 0.78rem;
+    font-weight: bold;
+    line-height: 217.89%;
+}
+
+.news-card__background {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 390px;
+    background-color: #000000;
+}
+
+.news-card__background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
 }
 
 .news-card__title {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 75%;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 120%;
     color: #ffffff;
+    opacity: 1;
 }
+
+.news-card__text {
+    font-size: 1rem;
+    line-height: 217.89%;
+}
+
+.request-information {
+    height: 100vh;
+}
+
+
+
 
 
 @media (max-width: 1500px) {

@@ -26,4 +26,7 @@ let heroSwiper = new Swiper('.hero__swiper-container', {
 
 let newsSwiper = new Swiper('.news__swiper-container', {
     speed: 400,
+    spaceBetween: 20,
+    slidesPerView: 3,
+    slidesOffsetBefore: document.documentElement.clientWidth * 0.17,
 });
