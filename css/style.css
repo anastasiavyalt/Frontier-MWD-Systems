@@ -191,7 +191,7 @@ a {
     overflow: hidden;
 }
 
-.swiper-container {
+.hero__swiper-container {
     height: 100%;
 }
 
@@ -620,10 +620,6 @@ a {
 }
 
 /* NEWS */
-.news {
-    height: 100vh;
-}
-
 .news__title {
     margin-top: 16vh;
     margin-left: 17vw;
@@ -676,9 +672,97 @@ a {
     line-height: 217.89%;
 }
 
+/* REQUEST FORM */
 .request-information {
+    margin-top: 15vh;
     height: 100vh;
 }
+
+.request-information__form {
+    margin: 0 auto;
+    padding: 4% 10%;
+    width: 83.3%;
+    background-color: #F7F7F7;;
+}
+
+.request-information__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.request-information__form-top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.request-information__form-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.request-information__form-column {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.request-information__form input[type="text"],
+.request-information__form input[type="email"],
+.request-information__form input[type="tel"],
+.request-information__form select {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    margin-bottom: 3.5rem;
+    background-color: #F7F7F7;
+    border: none;
+    border-bottom: solid 2px #000000;
+    opacity: 0.4;
+}
+
+.request-information__form input[type="text"]:active,
+.request-information__form input[type="email"]:active,
+.request-information__form input[type="tel"]:active,
+.request-information__form select:active,
+.request-information__form input[type="text"]:focus,
+.request-information__form input[type="email"]:focus,
+.request-information__form input[type="tel"]:focus,
+.request-information__form select:focus  {
+    border-bottom-color: #FFCB05; 
+    outline: none;
+}
+
+.request-information__form input[type="text"] {
+    width: 100%;
+}
+
+.request-information__form input[type="submit"] {
+    padding: 19px 71px 16px 75px;
+    font-size: 1rem;
+    line-height: 1.39rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: #F7F7F7;
+    border: 2px solid #000000;
+}
+
+.request-information__form label {
+    font-size: 0.78rem;
+    line-height: 1.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
 
 
 

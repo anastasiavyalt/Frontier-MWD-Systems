@@ -254,7 +254,32 @@
     </section>
 
     <section class="request-information">
-
+        <form class="request-information__form" action="" method="POST">
+            <h2 class="request-information__title">Request More Information</h2>
+            <input type="text" name="user-name" id="user-name" placeholder="Alex">
+            <div class="request-information__form-top-container">
+                <div class="request-information__form-column">
+                    <input type="text" name="company" id="company" placeholder="Company">
+                    <input type="email" name="email" id="email" placeholder="alex@mail.com">
+                </div>
+                <div class="request-information__form-column">
+                    <select name="business-segment" id="business-segment">
+                        <option value="" disabled selected hidden>Business segment</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="construction">Construction</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+                </div>
+            </div>
+            <input type="text" name="comment" id="comment" placeholder="Комментарий">
+            <div class="request-information__form-bottom-container">
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" value="consent">
+                    I give consent for my personal data to be processed
+                </label>
+                <input type="submit" value="Send">
+            </div>
+        </form>
     </section>
 
     <script src="scripts/swiper.min.js"></script>
