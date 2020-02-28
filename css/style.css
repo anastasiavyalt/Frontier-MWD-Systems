@@ -619,6 +619,11 @@ a {
     background-color:#1F1F1F;
 }
 
+#map {
+    width: 100%;
+    height: 100%;
+}
+
 /* NEWS */
 .news__title {
     margin-top: 16vh;
@@ -671,6 +676,7 @@ a {
     font-size: 1rem;
     line-height: 217.89%;
 }
+
 
 /* REQUEST FORM */
 .request-information {
