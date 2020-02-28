@@ -204,6 +204,24 @@
 
     <section class="international-sales">
         <div id="map"></div>
+        <div class="international-sales__links">
+            <button class="international-sales__link international-sales__link-world international-sales__link--active" type="button">World</button>
+            <button class="international-sales__link international-sales__link-russia" type="button">Russia</button>
+        </div>
+        <div class="international-sales__content">
+            <div class="international-sales__left-column">
+                <h2 class="international-sales__title">International <span class="international-sales__gold-text">Sales</span></h2>
+                <a class="international-sales__learn-more learn-more" href="">Learn more</a>
+            </div>
+            <div class="international-sales__vline"></div>
+            <div class="international-sales__right-column">
+                <h3 class="international-sales__subtitle">Need Help with Shipping?</h3>
+                <p class="international-sales__text">
+                    We offer several logistics options for international shipping, and can help make sure that your kit
+                    arrives in the right place at the right time.
+                </p>
+            </div>
+        </div>
     </section>
 
     <section class="news">
@@ -314,6 +332,7 @@
             <div class="request-information__form-bottom-container">
                 <label for="consent">
                     <input type="checkbox" id="consent" name="consent" value="consent">
+                    <div class="request-information__checkmark"></div>
                     I give consent for my personal data to be processed
                 </label>
                 <input type="submit" value="Send">
@@ -321,7 +340,8 @@
         </form>
     </section>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4e083d2-92d6-4ebf-896e-99f812f42406&lang=en_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4e083d2-92d6-4ebf-896e-99f812f42406&lang=en_RU"
+        type="text/javascript"></script>
     <script src="scripts/swiper.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>

@@ -37,8 +37,9 @@ window.onload = function() {
 
     /* MAP */
     ymaps.ready(init);
+    let myMap;
     function init(){
-        let myMap = new ymaps.Map("map", {
+        myMap = new ymaps.Map("map", {
             center: [41.76081169, 15.44756297],
             zoom: 3,
             controls: ['zoomControl']
@@ -64,5 +65,26 @@ window.onload = function() {
         myMap.geoObjects.add(objectManager);
 
     }
+
+    let world = document.querySelector(".international-sales__link-world");
+    let russia = document.querySelector(".international-sales__link-russia");
+
+    world.addEventListener("click", function() {
+        myMap.setCenter([41.76081169, 15.44756297], 3, {
+            duration: 800
+        });
+        russia.classList.remove("international-sales__link--active");
+        world.classList.add("international-sales__link--active");
+    });
+
+    russia.addEventListener("click", function() {
+        myMap.setCenter([64.70252961, 93.36983371], 4, {
+            duration: 800
+        });
+        russia.classList.add("international-sales__link--active");
+        world.classList.remove("international-sales__link--active");
+    });
+    
+
 };
 

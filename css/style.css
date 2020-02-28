@@ -615,9 +615,80 @@ a {
 /* INTERNATIONAL SALES MAP */
 
 .international-sales {
+    position: relative;
     height: 72vh;
-    background-color:#1F1F1F;
+    background-color:#FFFAEB;
 }
+
+.international-sales__links {
+    position: absolute;
+    top: 6vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.international-sales__link {
+    margin-right: 28px;
+    font-weight: bold;
+    font-size: 0.89rem;
+    line-height: 160%;
+    background-color: transparent;
+    border: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.international-sales__link--active {
+    border-bottom: solid 2px;
+    opacity: 1;
+}
+
+.international-sales__content {
+    position: absolute;
+    top: 26vh;
+    left: 16.7%;
+    display: flex;
+}
+
+.international-sales__left-column {
+    margin-right: 18%;
+}
+
+.international-sales__title {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 140%
+}
+
+.international-sales__gold-text {
+    display: block;
+    color: #FFCB05;
+}
+
+.international-sales__vline {
+    margin-right: 5%;
+    width: 2px;
+    height: 181px;
+    background: #FFCB05;
+}
+
+.international-sales__right-column {
+    width: 25%;
+    font-family: Open Sans;
+}
+
+.international-sales__subtitle {
+    font-weight: bold;
+    font-size: 1.33rem;
+    line-height: 217.89%;
+}
+
+.international-sales__text {
+    font-size: 1rem;
+    line-height: 217.89%;
+}
+
 
 #map {
     width: 100%;
@@ -715,10 +786,8 @@ a {
     flex-direction: column;
 }
 
-.request-information__form input[type="text"],
-.request-information__form input[type="email"],
-.request-information__form input[type="tel"],
-.request-information__form select {
+.request-information input:not([type="submit"]):not([type="checkbox"]),
+.request-information select {
     padding-top: 1.1rem;
     padding-bottom: 1.1rem;
     margin-bottom: 3.5rem;
@@ -728,20 +797,46 @@ a {
     opacity: 0.4;
 }
 
-.request-information__form input[type="text"]:active,
-.request-information__form input[type="email"]:active,
-.request-information__form input[type="tel"]:active,
-.request-information__form select:active,
-.request-information__form input[type="text"]:focus,
-.request-information__form input[type="email"]:focus,
-.request-information__form input[type="tel"]:focus,
-.request-information__form select:focus  {
+.request-information input:not([type="submit"]):not([type="checkbox"]):focus,
+.request-information select:focus  {
     border-bottom-color: #FFCB05; 
     outline: none;
 }
 
 .request-information__form input[type="text"] {
     width: 100%;
+}
+
+.request-information__form input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.request-information__checkmark {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    border: solid 1px #D2D2D2;
+    cursor: pointer;
+}
+
+.request-information__checkmark::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 8px;
+    height: 6px;
+    background: url("../img/checked.svg");
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.request-information__form input[type="checkbox"]:checked ~ .request-information__checkmark::after {
+    opacity: 1;
 }
 
 .request-information__form input[type="submit"] {
