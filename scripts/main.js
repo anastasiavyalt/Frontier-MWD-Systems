@@ -43,6 +43,17 @@ window.onload = function() {
     let world = document.querySelector(".international-sales__link-world");
     let russia = document.querySelector(".international-sales__link-russia");
 
+    let toDefaultState = function() {
+        map.classList.remove("international-sales__map--show");
+        mapInfo.classList.remove("international-sales__content--hide");
+        myMap.balloon.close();
+    }
+
+    let showMapOnly = function() {
+        map.classList.add("international-sales__map--show");
+        mapInfo.classList.add("international-sales__content--hide");
+    }
+
     ymaps.ready(init);
     let myMap;
     function init(){
@@ -72,20 +83,12 @@ window.onload = function() {
         myMap.geoObjects.add(objectManager);
 
         myMap.geoObjects.events.add('click', function () {
-            map.classList.add("international-sales__map--show");
-            mapInfo.classList.add("international-sales__content--hide");
+            showMapOnly();
         });
 
         myMap.events.add("actiontick", function() {
-            map.classList.add("international-sales__map--show");
-            mapInfo.classList.add("international-sales__content--hide");
+            showMapOnly();
         })
-    }
-
-    let toDefaultState = function() {
-        map.classList.remove("international-sales__map--show");
-        mapInfo.classList.remove("international-sales__content--hide");
-        myMap.balloon.close();
     }
 
     mapSection.addEventListener('mouseleave', function () {
@@ -103,7 +106,6 @@ window.onload = function() {
         });
         russia.classList.remove("international-sales__link--active");
         world.classList.add("international-sales__link--active");
-        toDefaultState();
     });
 
     russia.addEventListener("click", function() {
@@ -112,8 +114,7 @@ window.onload = function() {
         });
         russia.classList.add("international-sales__link--active");
         world.classList.remove("international-sales__link--active");
-        map.classList.add("international-sales__map--show");
-        mapInfo.classList.add("international-sales__content--hide");
+        showMapOnly();
     });
     
 
